@@ -7,4 +7,15 @@ var result = source
   .filter(x => !isNaN(x))
   .reduce((x, y) => x + y);
 
-console.log(result);
+console.log(result) || displayInPreview(result);
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
