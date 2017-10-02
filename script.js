@@ -8,7 +8,7 @@ var responseStream = requestStream
   );
 
 responseStream.subscribe(response => {
-  console.log(response) || displayInPreview(response);
+  console.log(response) || displayInPreview(response[0].login) || displayInPreview(response[1].login) || displayInPreview(response[2].login);  
 });
 
 
